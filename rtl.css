@@ -1,0 +1,61 @@
+/*
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+See http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+@import url("../harveststore/rtl.css");
+
+/***************	Float Left		*********************/
+.cms-block1 .one_third{float:left;}
+
+/***************	Float Right		*********************/
+
+
+
+.header-main{text-align:left;}
+.topbar-contact{
+	border-left:1px solid #999999;border-right:none;
+	background-position:right center;
+	padding: 0 50px 0 35px;
+}
+.header-search{float:left; border-radius: 5px 0 0 0;}
+
+/***************	Menu		*********************/
+.navigation-menu{text-align:right;}
+.navigation .menu-home.active .menu-home-inner:hover, .navigation .menu-home.active .menu-home-inner, .navigation .menu-home-inner:hover{
+	border-radius:0 5px 0 0;
+}
+.mega-menu ul > li {
+    border-right: 1px solid #0f395b;
+    border-left: 1px solid #326792;
+}
+.mega-menu ul > li:last-child {border-left: medium none;border-right: 1px solid #0f395b;}
+
+/***************	Footer		*********************/
+.footertop-band .simple-type.small-title:before{   border-left-color:#ffffff;}
+@media only screen and (max-width: 1250px){
+	#footer-widget-area .first-widget{padding-left:20px;}
+}
+@media only screen and (min-width: 980px) and (max-width: 1249px) {	
+	
+}
+@media only screen and (max-width: 979px){
+	.mega-menu ul > li{border:none;}
+}
+@media only screen and (max-width: 767px){
+	.header_left{text-align:center;}
+	.header_right{float:none;display:inline-block;vertical-align:top;}
+	.header-search{border-radius:5px;}
+}
+@media only screen and (max-width: 479px) {
+	
+}
+@media only screen and (max-width: 380px){	
+	.header_cart .togg .widget.widget_shopping_cart{left:-106px;right:auto;}	
+	.topbar-contact{border:none;}
+}
+@media only screen and (max-width: 319px){
+	.header_cart .togg .widget.widget_shopping_cart { left: -66px;right:auto;}
+}
